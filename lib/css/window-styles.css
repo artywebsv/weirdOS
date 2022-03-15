@@ -1,0 +1,39 @@
+.window-top-bar{
+    /* height: 25px; */
+    margin-bottom: 3px;
+}
+
+/* .window-bar-margin-buttons{
+    margin-left: 0.35em;
+} */
+
+.height-webkit-fill-available{
+    height: -webkit-fill-available;
+}
+
+.window-hcalc-taskbar{
+    height: calc(100% - 45px) !important;
+  }
+
+.top-taskbar-space{
+    top: 45px !important;
+}
+
+.right-taskbar-space{
+    right: 45px !important;
+}
+
+.bottom-taskbar-space{
+    bottom: 45px !important;
+}
+
+.window-button-top-bar{
+    width: 20px;
+    height: 20px;
+    font-size: 0.6em;
+    margin-left: 2px;
+    /* height: calc(100% - 6px); */
+}
+.window-button-top-bar:first-child{
+    margin-left: 5px;
+}

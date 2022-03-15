@@ -1,0 +1,49 @@
+.portlet-placeholder {
+  border: 1px dotted black;
+  margin: 5px 0px 0px 5px;
+  height: 72px;
+}
+
+.desktop-button-placeholder {
+  background-color: #007fff;
+  border: 1px dotted black;
+  margin: 5px 0px 0px 5px;
+  width: 75px;
+  height: 72px;
+  display: inline-block;
+}
+
+.desktop-button{
+  font-size: 2em;
+  text-align: center;
+  justify-self: center;
+  width: 68px;
+  height: 68px;
+  transition: all 0.3s ease-in-out;
+}
+
+.desktop-button:hover{
+  background-color: rgba(80,80,80,0.5);
+  /*border: 1px solid #003eff;*/
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.desktop-button-link{
+  /*color: #ffd000;*/
+  color: #333333;
+  /* filter: drop-shadow(1px 1px 1px rgba(0,0,0,1)); */
+}
+
+.desktop-button-name{
+  margin-top: 0;
+  font-size: 0.4em;
+  filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.6));
+}
+
+.text-shadow{
+  text-shadow: 0px 0px 2px rgba(51,51,51,1);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+		<title>ARTYWEB - DOCUMENTS</title>
+		<style type="text/css">
+			body{
+				margin: 0 !important;
+			}
+		</style>
+
+		<!-- Require JS (REQUIRED) -->
+		<script data-main="./main.js" src="js/require.min.js"></script>
+		<script>
+			define('elFinderConfig', {
+				defaultOpts : {
+					cssAutoLoad: ['themes/elFinder.themes/css/elfinder.theme.min.css'],
+					url : 'php/connector.minimal.php',
+
+					handlers : {
+						dblclick : function(event, elfinderInstance) {
+						event.preventDefault();
+						elfinderInstance.exec('getfile')
+							.done(function() { elfinderInstance.exec('quicklook'); })
+							.fail(function() { elfinderInstance.exec('open'); });
+						}
+					},
+
+					getFileCallback : function(files, fm) {
+						return false;
+					},
+
+					height : '100%', // you can use '100%' to fit window height
+					resizable: false
+				},
+				managers : {
+					// 'DOM Element ID': { /* elFinder options of this DOM Element */ }
+					'elfinder': {}
+				}
+			});
+		</script>
+	</head>
+	<body>
+
+		<div id="elfinder"></div>
+
+	</body>
+</html>

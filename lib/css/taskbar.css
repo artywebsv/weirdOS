@@ -1,0 +1,152 @@
+.main-taskbar{
+  background-color: rgba(0,0,0,0.4);
+  width: fit-content;
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  bottom: 10px;
+  border-radius: 2em;
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  border-width: 0.1em;
+  border-color: white;
+}
+
+.main-taskbar-w{
+  height: 45px;
+}
+
+.main-taskbar-h{
+  width: 45px;
+}
+
+/* .main-taskbar-top-position{
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.main-taskbar-left-position{
+  border-right: 1px solid rgba(0,0,0,0.2);
+}
+.main-taskbar-right-position{
+  border-left: 1px solid rgba(0,0,0,0.2);
+}
+.main-taskbar-bottom-position{
+  border-top: 1px solid rgba(0,0,0,0.2);
+} */
+
+.taskbar-container{
+  background-color: rgba(0,0,0,0);
+  width: auto;
+  height: 100%;
+  /* border-top: 1px solid rgba(255,255,255,0.2); */
+  position: relative;
+  z-index: 5030;
+}
+
+.taskbar-button{
+  color: #ccc;
+  font-size: 2.3em;
+  display: block;
+  margin: 0px 3px;
+}
+
+.taskbar-button-w{
+  /* min-width: 50px; */
+  height: 100%;
+  float: left;
+}
+
+.taskbar-button-h{
+  /* min-height: 50px; */
+  width: 100%;
+  float: none;
+}
+
+.taskbar-background{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  z-index: 5020;
+  overflow: hidden;
+}
+
+.taskbar-background-wallpaper{
+  content: "";
+  margin: -30px;
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.taskbar-button-link{
+  color: #ccc;
+  /* background-color: rgba(255,255,255,0.3); */
+  display: flex;
+  padding: 5px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.taskbar-button-link:hover{
+  /* font-size: 1.25em; */
+  background-color: rgba(255,255,255,0.2);
+  transition: all 0.2s ease-in-out;
+  /* padding: 5px; */
+  z-index: 9999999;
+  /* bottom: 15px; */
+}
+
+.taskbar-button-link-harrow{
+  width: 50% !important;
+  float: left;
+}
+
+.taskbar-live-time{
+  color: #ccc;
+  /*background-color: #003eff;*/
+  min-width: 150px;
+  height: 100%;
+  border-left: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  /*position: relative;*/
+  /*z-index: 5030;*/
+}
+
+.time-frame > div {
+  width: 100%;
+  text-align: center;
+}
+
+#date-part {
+  font-size: 0.75em;
+}
+
+#time-part {
+  font-size: 1.2em;
+}
+
+.taskbar-toggle-position-btns{
+  background-color: royalblue;
+  min-width: 15px;
+  height: 100%;
+  display: block;
+  float: right;
+}
+
+#taskbar-toggle-position{
+  height: 33.3333333%;
+}

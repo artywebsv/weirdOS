@@ -1,0 +1,15 @@
+.window-messenger-container{
+    max-width: 250px;
+    min-width: 100px;
+    width: 100%;
+    max-height: fit-content;
+    min-height: 200px;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+.window-messenger-main{
+    background-color: transparent;
+    width: calc(100% - 12px);
+    height: calc(100% - 32px);
+}

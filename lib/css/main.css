@@ -1,0 +1,554 @@
+@font-face {
+  font-family: 'minimal';
+  src: url('../../sistema/fuentes/minimal.otf');
+  font-weight: 400;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  font-family: 'minimal';
+  background-color: darkseagreen;
+  /* line-height: 1.5; */
+}
+
+.main-container{
+  width: 100%;
+  height: 100%;
+}
+
+.main-desktop-h-taskbar{
+  height: calc(100% - 46px);
+}
+
+.main-desktop-w-taskbar{
+  width: calc(100% - 46px);
+}
+
+.column-grid {
+  width: 75px;
+  height: calc(100% - 46px);
+  float: left;
+}
+
+.button-container{
+  width: 100%;
+  display: block;
+  position: relative;
+  /*border-right: 1px solid rgba(0,0,0, 0.2);*/
+}
+
+.font-size-small{
+  font-size: small;
+}
+
+.font-size-x-large{
+  font-size: 2rem;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.text-white{
+  color: white !important;
+}
+
+.text-dark{
+  color: black;
+}
+
+.text-blue{
+  color: royalblue;
+}
+
+.float-left{
+  float: left !important;
+}
+
+.float-right{
+  float: right !important;
+}
+
+.w-auto{
+  width: auto !important;
+}
+
+.w-50{
+  width: 50% !important;
+}
+
+.w-100{
+  width: 100% !important;
+}
+
+.h-50{
+  height: 50% !important;
+}
+
+.h-100{
+  height: 100% !important;
+}
+
+.d-block{
+  display: block !important;
+}
+
+.d-flex{
+  display: flex !important;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.inline-block{
+  display: inline-block !important;
+}
+
+.border-none{
+  border: none;
+}
+
+.br-small{
+  border-radius: 3px !important;
+}
+
+.br-1{
+  border-radius: 1em !important;
+}
+
+.br-2{
+  border-radius: 2em;
+}
+
+.br-3{
+  border-radius: 3em;
+}
+
+.br-50{
+  border-radius: 50% !important;
+}
+
+.br-100{
+  border-radius: 100% !important;
+}
+
+.bg-white{
+  background-color: white !important;
+}
+
+.bg-white-50{
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.bg-red{
+  background-color: red !important;
+}
+
+.bg-blue{
+  background-color: royalblue !important;
+}
+
+.bg-yellow{
+  background-color: orange !important;
+}
+
+.min-m{
+  margin: 3px !important;
+}
+
+.m-samll{
+  margin: 0.4em !important;
+}
+
+.m-1{
+  margin: 1em !important;
+}
+
+.m-2{
+  margin: 2em !important;
+}
+
+.m-3{
+  margin: 3em !important;
+}
+
+.m-4{
+  margin: 4em !important;
+}
+
+.min-p{
+  margin: 3px !important;
+}
+
+.ml-1{
+  margin-left: 1em !important;
+}
+
+.p-small{
+  margin: 0.4em !important;
+}
+
+.p-0{
+  padding: 0 !important;
+}
+
+.p-1{
+  padding: 1em !important;
+}
+
+.p-2{
+  padding: 2em !important;
+}
+
+.p-3{
+  padding: 3em !important;
+}
+
+.p-4{
+  padding: 4em !important;
+}
+
+.top-0{
+  top: 0 !important;
+}
+.left-0{
+  left: 0 !important;
+}
+.right-0{
+  right: 0 !important;
+}
+.bottom-0{
+  bottom: 0 !important;
+}
+
+.backdrop-filter-blur{
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+button{
+  cursor: pointer !important;
+}
+
+.overflow-hidden{
+  overflow: hidden !important;
+}
+
+.overflow-auto{
+  overflow: auto !important;
+}
+
+.position-absolute{
+  position: absolute !important;
+}
+
+.position-fixed{
+  position: fixed !important;
+}
+
+#desktop{
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(65px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+  /* grid-gap: 5px; */
+  height: calc(100% - 85px);
+}
+
+#toggle-admin-menu{
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+#toggle-admin-menu::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0c9";
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+#toggle-admin-menu:hover::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f31e";
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.active-toggle-admin-menu{
+  background-color: rgba(255, 0, 50, 1) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  right: 255px !important;
+}
+
+.active-toggle-admin-menu::before{
+  content: "\f78c" !important;
+  transform: rotate(0deg) !important;
+  -webkit-transform: rotate(0deg) !important;
+}
+
+.active-toggle-admin-menu:hover::before{
+  content: "\f78c" !important;
+  transform: rotate(-180deg) !important;
+  -webkit-transform: rotate(-180deg) !important;
+}
+
+#admin-panel{
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 285px;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  right: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.tresD-effect{
+  background-color: cyan;
+  background-image: url('../../img/wallpapers/default.jpg');
+  background-position: calc(50% - 10px) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+  position: fixed;
+  animation: anim 3s infinite;
+}
+.tresD-effect::after{
+  background-color: red;
+  background-image: url('../../img/wallpapers/default.jpg');
+  background-position: calc(50% + 10px) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  mix-blend-mode: darken;
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: fixed;
+}
+
+.launcher-icon-square{
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  justify-self: center;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes anim {
+  0%{
+    filter: blur(2px);
+  }50%{
+    filter: blur(5px);
+  }100%{
+    filter: blur(2px);
+  }
+}
+
+#elfinder{
+ width: 100% !important;
+ height: 100% !important;
+}
+
+.aw-dialog-titlebar-close, .aw-dialog-titlebar-min, .aw-dialog-titlebar-max{
+  color: #fff;
+  font-size: 0.5rem;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  border: none !important;
+  padding: 0.75em !important;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+}
+
+.aw-dialog-titlebar-close{
+  background-color: red;
+}
+.aw-dialog-titlebar-min{
+  background-color: orange;
+}
+.aw-dialog-titlebar-max{
+  background-color: green;
+}
+/* For Desktop View */
+@media screen 
+  and (min-device-width: 1024px){
+    .main-taskbar{
+      /* background-color: #63c971; */
+      color: #fff;
+    }
+
+    .window-container{
+      min-width: 635px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.2);
+      position: absolute !important;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+
+    .window-container-fullscreen{
+      width: calc(100% - 8px) !important;
+      height: calc(100% - 8px) !important;
+    }
+
+    #desktop{
+      padding: 5px !important;
+      grid-auto-flow: column !important;
+      height: calc(100% - 95px) !important;
+    }
+
+    .window-container-main-fullscreen{
+      height: calc(100% - 25px) !important;
+    }
+}
+  
+/* For Tablet View */
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px){
+    .main-taskbar{
+      /* background-color: orange !important; */
+      color: black;
+    } 
+
+    #desktop{
+      grid-auto-flow: row;
+    }
+    
+    .window-container{
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.2);
+      position: absolute !important;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+
+    .window-container-main{
+      margin: 0px;
+    }
+}
+  
+/* For Mobile Portrait View */
+@media screen 
+  and (max-device-width: 480px) 
+  and (orientation: portrait){
+    .main-taskbar{
+      /* background-color: red !important; */
+      color: #fff;
+    } 
+}
+  
+/* For Mobile Landscape View */
+@media screen 
+  and (max-device-width: 640px) 
+  and (orientation: landscape){
+    .main-taskbar{
+      background-color: cyan !important;
+      color: black;
+    } 
+
+    #desktop{
+      grid-auto-flow: row;
+    }
+}
+  
+/* For Mobile Phones Portrait or Landscape View */
+@media screen 
+  and (max-device-width: 640px){
+    .main-taskbar{
+      /* background-color: chartreuse !important; */
+      color: black;
+    } 
+
+    #desktop{
+      padding: 35px 5px 5px 5px;
+      grid-auto-flow: row;
+      height: calc(100% - 120px);
+    }
+}
+  
+/* For iPhone 4 Portrait or Landscape View */
+@media screen 
+  and (min-device-width: 320px) 
+  and (-webkit-min-device-pixel-ratio: 2){
+    .main-taskbar{
+      /* background-color:brown !important; */
+      color: black;
+    } 
+
+    #desktop{
+      padding: 35px 5px 5px 5px;
+      grid-auto-flow: row;
+      height: calc(100% - 120px);
+    }
+}
+  
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) 
+  and (device-width: 320px) 
+  and (-webkit-min-device-pixel-ratio: 2){
+    .main-taskbar{
+      /* background-color:cornflowerblue !important; */
+      color: black;
+    }
+
+    #desktop{
+      grid-auto-flow: row;
+    }
+}
+  
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) 
+  and (min-device-width: 375px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+    .main-taskbar{
+      /* background-color:darkgoldenrod !important; */
+      color: black;
+    } 
+
+    #desktop{
+      grid-auto-flow: row;
+    }
+}
