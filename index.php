@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="lib/elFinder/css/elfinder.min.css">
     <link rel="stylesheet" href="lib/elFinder/css/theme.css">
     <link rel="stylesheet" href="lib/elFinder/themes/elFinder.themes/css/elfinder.theme.min.css">
+    <link rel="stylesheet" href="lib/jQueryContextMenu/jquery.contextMenu.min.css">
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
     <!-- link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" -->
 </head>
@@ -78,7 +79,6 @@
 <script src="lib/popper/popper.min.js"></script>
 <script src="lib/tippyjs/tippy-bundle.umd.min.js"></script>
 <script src="lib/fontawesome/all.min.js"></script>
-<script data-main="./lib/elFinder/main.js" src="lib/elFinder/js/require.min.js"></script>
 
 <script src="lib/js/main.js"></script>
 <script src="lib/js/dialogWindow.js"></script>
@@ -87,5 +87,10 @@
 <script src="lib/js/taskbar.js"></script>
 <script src="lib/js/web-browser.js"></script>
 <script src="lib/js/desktop-buttons.js"></script>
+
+<script src="lib/jQueryContextMenu/jquery.contextMenu.min.js"></script>
+<script src="lib/jQueryContextMenu/jquery.ui.position.min.js"></script>
+
+<script data-main="./lib/elFinder/main.js" src="lib/elFinder/js/require.min.js"></script>
 </body>
 </html>

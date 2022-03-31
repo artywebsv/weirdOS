@@ -341,7 +341,7 @@ button{
 .tresD-effect{
   background-color: cyan;
   background-image: url('../../img/wallpapers/default.jpg');
-  background-position: calc(50% - 10px) center;
+  background-position: calc(50% - 5px) center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -352,7 +352,7 @@ button{
 .tresD-effect::after{
   background-color: red;
   background-image: url('../../img/wallpapers/default.jpg');
-  background-position: calc(50% + 10px) center;
+  background-position: calc(50% + 5px) center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -376,7 +376,7 @@ button{
   0%{
     filter: blur(2px);
   }50%{
-    filter: blur(5px);
+    filter: blur(3px);
   }100%{
     filter: blur(2px);
   }
